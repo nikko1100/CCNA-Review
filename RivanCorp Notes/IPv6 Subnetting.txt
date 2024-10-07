@@ -1,0 +1,92 @@
+IPv6 Subnetting
+	Ref: https://youtu.be/r1b8XAFuwmQ?si=f4R-3jWhGsZhJamH
+	Ref: https://youtu.be/4EJay-6Bioo?si=zXJ5EvSgmswxh7X4
+
+
+ex. 2001:db8:ac10:face::/64 and 400 users
+
+CIA Method
+
+Convert: 
+	Convert 400 users to bits
+	2^10	2^9		2^8		2^7		2^6		2^5		2^4		2^3		2^2		2^1		2^0 
+	1024	512		256		128		64		32		16		8		4		2		1	= bit value
+	
+	0		0		0		0		0		0		0		0		0		0		0	= bit
+	
+	11		10		9		8		7		6		5		4		3		2		1	= number of bit/s
+	
+	400 is between the value of 256 and 512 therefore it is 9 bits
+	400 = 9 bits
+	
+
+	
+Add:
+	/64 + 9 bits = /73 the new slash
+	
+Ichamba:
+	
+	2001 : 0db8 : ac10 : face : 0000 : 0000 : 0000 : 0000
+	
+	Every single digit in IPv6 are hexadecimals, which means a single digit contains four bits.
+	For example, the hexadecimal 2 from 2001:0db8:
+		if we were to breakdown hexadecimal 2 it will look like this:
+			
+			2		=hexadecimal
+			8 4 2 1	=bit value			
+			0 0 1 0	=bits, it's 0010 because that is it's actual binary value
+
+	Locate /73 within the IPv6 address
+	
+	0000 : 0000 : 0000 : 0000 : 0000 :
+	/16    /32    /48    /64    /80
+	
+	/73 is inside the 5th hextet
+	1st  : 2nd  : 3rd  : 4th  : 5th																			=hextet no.
+								
+	2001 : 0db8 : ac10 : face : hex 0				hex 0				hex 0				hex 0			=the hex numbers in the ipv6 address
+							    0	0	0	0		0	0	0	0		0   0	0	0		0	0	0	0 :	=the bits of each hexadecimal in the 5th hextet
+	/16    /32    /48    /64    /65 /66 /67 /68     /69 /70 /71 /72     /73 /74 /75 /76     /77 /78 /79 /80 
+	
+	After locating /73, count in binary from the left of the line
+	
+	We'll be zooming in only on the 5th hextet
+	this entire thing is the 5th hextet brokendown to their bits
+	: 0000 		0000 		0 | 000 		0000 :	= :0000:
+	: 0000 		0000 		1 | 000 		0000 :	= :0080:
+	: 0000 		0001 		0 | 000 		0000 :	= :0100:
+	: 0000 		0001 		1 | 000 		0000 :	= :0180:
+	: 0000 		0010 		0 | 000 		0000 :	= :0200:
+	: 0000 		0010 		1 | 000 		0000 :	= :0280:
+	: 0000 		0011 		0 | 000 		0000 :	= :0300:
+	: 0000 		0011 		1 | 000 		0000 :	= :0380:
+	
+	now that we got our subnets let's zoom out of the 5th hextet and see how it looks in full ipv6
+	
+	2001 : 0db8 : ac10 : face : 0080 : 0000 : 0000 : 0000
+	2001 : 0db8 : ac10 : face : 0100 : 0000 : 0000 : 0000 
+	2001 : 0db8 : ac10 : face : 0180 : 0000 : 0000 : 0000
+	2001 : 0db8 : ac10 : face : 0200 : 0000 : 0000 : 0000
+	2001 : 0db8 : ac10 : face : 0280 : 0000 : 0000 : 0000
+	2001 : 0db8 : ac10 : face : 0300 : 0000 : 0000 : 0000
+	2001 : 0db8 : ac10 : face : 0380 : 0000 : 0000 : 0000
+	
+	Compressed version
+	IPv6 Networks
+	2001:db8:ac10:face:80::/73
+	2001:db8:ac10:face:100::/73
+	2001:db8:ac10:face:180::/73
+	2001:db8:ac10:face:200::/73
+	2001:db8:ac10:face:280::/73
+	2001:db8:ac10:face:300::/73
+	2001:db8:ac10:face:380::/73
+	
+	Possible address
+	2001:db8:ac10:face:80::1/73
+	2001:db8:ac10:face:80::2/73
+	2001:db8:ac10:face:80::3/73
+	2001:db8:ac10:face:80::4/73
+	 
+	
+	
+	
