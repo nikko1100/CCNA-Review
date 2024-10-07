@@ -1,0 +1,77 @@
+AI for Networking 
+Ref: https://youtu.be/AJshu0gZKdw?si=30lBbJCKGOGy4DNa
+
+Artificial Intelligence - a broad term encompassing many underlying technologies that allow a system to stimulate human intelligence.
+
+	Machine Learning - A subset of AI that can train a model with training data, and once trained, analyze and make predictions about new data.
+		Supervised Learning - A type of ML that can be trained on labeled data and then classify new data.
+			ex. Email - Spam & Not Spam
+			
+		Unsupervised Learning - A type of ML that can be trained on unlabeled data to see if the data naturally fall into groups and then assign new data to groups.
+			ex. Raw Data - Manually allow the AI to identify groups.
+		
+		Deep Learning - A subnet of ML that uses artificial neural networks that can use both Supervised and unsupervised learning, which is called semi-supervised learning.
+			Neural Networks:
+				Input Layer
+					Weighted Value
+					//Weighted Link for neurons to provide priority.
+				Hidden Layer
+					Bias Value
+					//Activation Function
+				Output Layer
+				
+				
+				Input	Hidden		Output
+				x1 -\
+				
+				x2 -X	
+				
+				x3 -/
+				
+				->Forward Propagation - after calculation = results predict value
+				
+				predict value - compared to loss function
+				
+				<- backwards propagation
+				
+					//repeat until predict value matches the loss function
+	
+	Predictive AI - predict what happens next.
+		Forecast Network issues.
+		
+	Generative AI - generate something origincal after feeding it references.
+		Provide assistance in creating network design.
+		
+
+Main Benefits
+	Network Design
+	Network Troubleshooting
+	Detecting malicious traffic
+	Predicting Network issues before they occur
+		
+
+		
+Cisco AI Applications
+Cisco Catalyst Center (Formerly Cisco DNA Center): uses AI to analyze network performance and identify potential issues before they arise.
+Cisco Nexus Dashboard and Cisco Nexus Dashboard Insights: Uses AI to correlate system faults and events with configuration changes.
+Cisco Meraki: Uses AI to provide real-time threat detection
+Cisco AppDynamics: Creates dynamic baseline information based on time of day or time of year to better detect anomalies.
+
+----
+Ansible
+	
+Configuration Drift is when individual changes made over time cause a device's config to deviate from the standard.
+Configuration Provisioning - refers to how configuration changes are applied to devices
+Configuration Management Tools
+
+Ansible 
+	communication protocol SSH
+	Key port 22 SSH
+	owned by Red Hat
+	written in Python
+	Agentless doesn't required any special software to run on managed devices
+	Push model - ansible server (control node) uses SSH to connect to managed devices and push configurations to them.
+		Playbooks: these files are blueprints of automation tasks. outline the logic and actions of the tasks that ansible should do. Written in YAML
+		Inventory: files list the devices that will be managed by Ansible such as Access Switch, Core Switch, WAN Router, Firewall, etc,. Written in INI, YAML, or other formats
+		Templates: files represent a device's config without specific values. Written in Jinja2 format.
+		Variables: list variables and their values. written in YAML  

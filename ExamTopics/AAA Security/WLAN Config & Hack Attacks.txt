@@ -1,0 +1,29 @@
+WLAN GUI/Interface
+
+WLC Options
+	WPA+WPA2
+	802.1x
+	Static WEP
+	Static WEP + 802.1x
+	CKIP
+	Nonne + EAP Passthrough
+	
+FT 802.1x or FT PSK - Fast Transition - designed to allow clients to make fast BSS transitions between APs without requiring reauthentication at every APs
+
+CCKM is a variation of WPA designed to provide fast secure roaming in addition to Secure auth and encryption via 802.1x and TKIP/MIC
+
+Web Authentication: after a wireless client gets an IP add and tries to access a web page, they will have to enter a username and password to authenticate.
+Web Passthrough: Similar to WebAuth but no username or password required. Only a warning is displayed and needs to be agreed.
+Conditional or splash page - similar but additionally require 802.1x layer 2 authentication.
+
+
+
+---
+ARP Ppisoning - Hacker sends Gratuitious ARP replies to a port in the network.
+	//Poison the ARP Cache by manipulating MAC address through ARP replies.
+	
+	Mitigation
+		Dynamic ARP Inspection
+
+MAC Flooding - Flood the device with MAC frames
+
