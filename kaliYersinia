@@ -20,6 +20,6 @@ cd /opt/yersinia
 ./configure --with-gtk 		 		
 make 		
 make install 		 		
-yersinia - G 	 	 
+yersinia -G 	 	 
 
 Extra: set LANCard to Bridge during labs
