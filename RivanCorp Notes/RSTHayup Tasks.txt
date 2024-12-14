@@ -476,9 +476,9 @@ conf t
  neighbor 207.7.7.2 remote-as 2
  neighbor 208.8.8.4 remote-as 45
  address-family ipv4
- neighbor activate
- neighbor activate
- neighbor activate
+ neighbor 209.9.9.3 activate
+ neighbor 207.7.7.2 activate
+ neighbor 208.8.8.4 activate
  network 10.1.1.0 mask 255.255.255.252
  network 207.7.7.0 mask 255.255.255.0
  network 208.8.8.0 mask 255.255.255.0
@@ -495,9 +495,9 @@ conf t
   neighbor 24.2.4.2 remote-as 2
   neighbor 208.8.8.1 remote-as 1
   address-family ipv4
-  neighbor activate
-  neighbor activate
-  neighbor activate
+  neighbor 45.4.5.5 activate
+  neighbor 24.2.4.2 activate
+  neighbor 208.8.8.1 activate
   network 44.44.44.44 mask 255.255.255.255
   network 45.4.5.0 mask 255.255.255.0
   network 24.2.4.0 mask 255.255.255.0
@@ -519,10 +519,10 @@ conf t
   neighbor 24.2.4.4 remote-as 45
   neighbor 207.7.7.1 remote-as 1
   address-family ipv4
-  neighbor activate
-  neighbor activate
-  neighbor activate
-  neighbor activate
+  neighbor 25.2.5.5 activate
+  neighbor 32.3.2.3 ctivate
+  neighbor 24.2.4.4 activate
+  neighbor 207.7.7.1 activate
   network 22.22.22.22 mask 255.255.255.255
   network 32.3.2.0 mask 255.255.255.0
   network 25.2.5.0 mask 255.255.255.0
@@ -544,9 +544,9 @@ conf t
   neighbor 32.3.2.2 remote-as 2
   neighbor 209.9.9.1 remote-as 1
   address-family ipv4
-  neighbor activate
-  neighbor activate
-  neighbor activate
+  neighbor 35.3.5.5 activate
+  neighbor 32.3.2.2 activate
+  neighbor 209.9.9.1 activate
   network 35.3.5.0 mask 255.255.255.0
   network 32.3.2.0 mask 255.255.255.0
   network 209.9.9.0 mask 255.255.255.0
@@ -568,9 +568,9 @@ conf t
   neighbor 25.2.5.2 remote-as 2
   neighbor 45.4.5.4 remote-as 45
   address-family ipv4
-  neighbor activate
-  neighbor activate
-  neighbor activate
+  neighbor 35.3.5.3 activate
+  neighbor 25.2.5.2 activate
+  neighbor 45.4.5.4 activate
   network 35.3.5.0 mask 255.255.255.0
   network 25.2.5.0 mask 255.255.255.0
   network 45.4.5.0 mask 255.255.255.0
