@@ -1,6 +1,7 @@
 Ref:https://youtu.be/IdqQfGUup28?si=eoiJOTDyWlU22Yjz
 a
 
+
 Basic Authentication
 	-sends credentials (user & pass) in the request headers
 	-uses Base64 encoding for credentials security
